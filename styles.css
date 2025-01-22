@@ -190,7 +190,7 @@ main {
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .book-cards {
@@ -219,7 +219,7 @@ main {
 }
 
 .book-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 #join {
