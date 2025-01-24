@@ -8,30 +8,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.querySelector('.close-btn'); // Close button for popup
   const reportButton = document.getElementById('report-button'); // "Report Question" button
   const starSystem = document.getElementById('star-system'); // Star counter
-  const userForm = document.getElementById('user-form'); // Email form
-  const emailInput = document.getElementById('username'); // Email input
+  const userForm = document.getElementById('user-form'); // Username form
+  const usernameInput = document.getElementById('username'); // Username input
   const userMessage = document.getElementById('user-message'); // Message under the form
   let correctAnswer = ""; // Placeholder for the correct answer
   let problemID = ""; // Placeholder for the problem ID
-  let email = ""; // Initialize email
+  let username = ""; // Initialize username
 
-  // Handle email submission
+  // Handle username submission
   userForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const inputEmail = emailInput.value.trim();
-    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputEmail)) { // Validate email format
-      email = inputEmail;
+    const inputUsername = usernameInput.value.trim();
+    if (/^\d{7}$/.test(inputUsername)) { // Validate username as 7-digit number
+      username = inputUsername;
       const userProgress = JSON.parse(localStorage.getItem('userProgress')) || {};
-      const userStars = userProgress[email]?.stars || 0; // Retrieve stars for the email or default to 0
+      const userStars = userProgress[username]?.stars || 0; // Retrieve stars for the username or default to 0
       starSystem.textContent = `⭐ ${userStars}`; // Update the star counter
-      userMessage.textContent = `Welcome, ${email}! Your progress is now being tracked.`;
+      userMessage.textContent = `Welcome, ${username}! Your progress is now being tracked.`;
       userMessage.style.color = ""; // Reset message color
-      if (!userProgress[email]) {
-        userProgress[email] = { stars: 0, solvedProblems: [] }; // Initialize progress for new email
+      if (!userProgress[username]) {
+        userProgress[username] = { stars: 0, solvedProblems: [] }; // Initialize progress for new username
         localStorage.setItem('userProgress', JSON.stringify(userProgress)); // Save user data
       }
     } else {
-      userMessage.textContent = 'Please enter a valid email address.';
+      userMessage.textContent = 'Please enter a valid 7-digit username.';
       userMessage.style.color = 'red';
       setTimeout(() => (userMessage.textContent = ''), 3000);
     }
@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
   bookCards.forEach(card => {
     card.addEventListener('click', (event) => {
       event.preventDefault(); // Prevent default link navigation
-      if (!email) {
-        alert('Please enter your email first to start tracking progress.');
+      if (!username) {
+        alert('Please enter your username first to start tracking progress.');
         return;
       }
       problemID = card.getAttribute('data-problem-id'); // Get the problem ID from the card
@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
     const userAnswer = popupInput.value.trim(); // Get user's answer
     const userProgress = JSON.parse(localStorage.getItem('userProgress')) || {};
-    const userStars = userProgress[email]?.stars || 0;
-    const solvedProblems = userProgress[email]?.solvedProblems || [];
+    const userStars = userProgress[username]?.stars || 0;
+    const solvedProblems = userProgress[username]?.solvedProblems || [];
 
     if (solvedProblems.includes(problemID)) {
       // Problem already solved
@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (userAnswer === correctAnswer) {
       // Correct answer and problem not solved yet
       popupInput.style.borderColor = 'green'; // Highlight green
-      userProgress[email].stars = userStars + 1; // Increment star count
-      userProgress[email].solvedProblems.push(problemID); // Mark the problem as solved
+      userProgress[username].stars = userStars + 1; // Increment star count
+      userProgress[username].solvedProblems.push(problemID); // Mark the problem as solved
       localStorage.setItem('userProgress', JSON.stringify(userProgress)); // Save updated progress
-      starSystem.textContent = `⭐ ${userProgress[email].stars}`; // Update star counter
+      starSystem.textContent = `⭐ ${userProgress[username].stars}`; // Update star counter
     } else {
       // Incorrect answer
       popupInput.style.borderColor = 'red'; // Highlight red
@@ -100,8 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Report Question Functionality
   reportButton.addEventListener('click', () => {
-    if (!email) {
-      alert('Please log in with your email to report a question.');
+    if (!username) {
+      alert('Please log in with your username to report a question.');
       return;
     }
     // Mock reporting logic
@@ -110,15 +110,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Optionally, log the report to localStorage for tracking purposes
     const reports = JSON.parse(localStorage.getItem('reportedQuestions')) || [];
-    reports.push({ email, question: popupTitle.textContent, timestamp: new Date().toISOString() });
+    reports.push({ username, question: popupTitle.textContent, timestamp: new Date().toISOString() });
     localStorage.setItem('reportedQuestions', JSON.stringify(reports));
   });
 
   // Load saved data from localStorage when the page loads
   const savedData = JSON.parse(localStorage.getItem('userProgress')) || {};
-  if (email in savedData) {
-    const userStars = savedData[email].stars;
+  if (username in savedData) {
+    const userStars = savedData[username].stars;
     starSystem.textContent = `⭐ ${userStars}`;
-    userMessage.textContent = `Welcome back, ${email}! Your progress is being tracked.`;
+    userMessage.textContent = `Welcome back, ${username}! Your progress is being tracked.`;
   }
 });
