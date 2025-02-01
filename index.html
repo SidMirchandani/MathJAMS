@@ -1,67 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Math JAMS</title>
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
-      rel="stylesheet"
-    />
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      href="https://i.postimg.cc/2jv9GmfM/Read-JAMS-1.png"
-      type="image/x-icon"
-    />
-    <!-- Firebase SDKs (v8) -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <!--
-      IMPORTANT:
-      In your CSS, include these rules (or similar):
-      
-      .topic-content { display: block; }
-      .topic-content.collapsed { display: none; }
-    -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://i.postimg.cc/2jv9GmfM/Read-JAMS-1.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Header Section -->
     <section id="home">
       <header>
-        <img
-          src="https://i.postimg.cc/2jv9GmfM/Read-JAMS-1.png"
-          alt="Math JAMS Logo"
-        />
+        <img src="https://i.postimg.cc/2jv9GmfM/Read-JAMS-1.png">
       </header>
       <subheader>
         <div>
-          <!-- Use href instead of src for links -->
-          <a href="https://nordvpn.com/">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGjryC__w5W7qqVkw8wmLh914my0tHoUNaeA&s"
-              height="30px"
-              alt="NordVPN"
-            />
-          </a>
-          <a href="https://nordpass.com/">
-            <img
-              src="https://bestreviews.net/wp-content/uploads/2024/06/nordpass-logo.svg"
-              height="30px"
-              alt="NordPass"
-            />
-          </a>
+          <a src="https://nordvpn.com/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGjryC__w5W7qqVkw8wmLh914my0tHoUNaeA&s" height = 30px></a>
+          <a src="https://nordpass.com/"><img src="https://bestreviews.net/wp-content/uploads/2024/06/nordpass-logo.svg" height = 30px></a>
         </div>
       </subheader>
     </section>
@@ -70,14 +30,9 @@
     <nav>
       <div class="container">
         <ul>
-          <li>
-            <img
-              src="https://i.postimg.cc/mD9jm3KC/MATH.png"
-              alt="Math JAMS Logo"
-              style="float: right;"
-              height="50px"
-            />
-          </li>
+          <p>
+            <li><img src="https://i.postimg.cc/mD9jm3KC/MATH.png" alt="Image from URL" style="float: right;" height = 50px /></li>
+          </p>
         </ul>
         <span class="star-counter" id="star-system">⭐ 0</span>
       </div>
@@ -85,280 +40,553 @@
 
     <!-- Main Content -->
     <main>
-      <!-- Compete Section -->
       <section id="compete" class="section">
-        <h3>COMPETE</h3>
+        <h3> COMPETE </h3>
+
         <div class="cards">
-          <a class="card" href="https://jams.edison.k12.nj.us/">
-            <b>LOCATION: </b> John Adams Middle School, Edison, NJ.
-          </a>
-          <a class="card" href="https://jams.edison.k12.nj.us/">
-            <b>WHO CAN APPLY: </b> All students in Edison from grades 3-8!
-          </a>
-          <a class="card" href="https://jams.edison.k12.nj.us/">
-            <b>DIVISIONS: </b> JUNIOR (grades 3-5) and SENIOR (grades 6-8).
-          </a>
-          <a class="card" href="https://jams.edison.k12.nj.us/">
-            <b>TIMINGS: </b> Dates and timings will be posted soon!
-          </a>
-          <a class="card" href="https://jams.edison.k12.nj.us/">
-            <b>PRICING: </b> $2 per participant.
-          </a>
-          <a class="card" href="https://jams.edison.k12.nj.us/">
-            <b>PRIZES: </b> Prizes will be posted soon!
-          </a>
-          <a class="card" id="join" href="https://jams.edison.k12.nj.us/">
-            <strong>JOIN HERE!</strong>
-          </a>
+          <a class="card" href="https://jams.edison.k12.nj.us/"><b>LOCATION: </b> John Adams Middle School, Edison, NJ.</a>
+          <a class="card" href="https://jams.edison.k12.nj.us/"><b>WHO CAN APPLY: </b> All students in Edison from grades 3-8!</a>
+          <a class="card" href="https://jams.edison.k12.nj.us/"><b>DIVISIONS: </b> We have 2 divisions, the JUNIOR division is for those in grades 3-5, and the SENIOR division is for those in grades 6-8.</a>
+          <a class="card" href="https://jams.edison.k12.nj.us/"><b>TIMINGS: </b> Dates and timings will be posted soon!</a>
+          <a class="card" href="https://jams.edison.k12.nj.us/"><b>PRICING: </b> The price is $2 per participant.</a>
+          <a class="card" href="https://jams.edison.k12.nj.us/"><b>PRIZES: </b> Prizes will be posted soon!</a>
+          <a class="card" id="join" href="https://jams.edison.k12.nj.us/"><strong>JOIN HERE!</strong></a>
         </div>
       </section>
 
-      <!-- User Login Section -->
       <section id="user-login" class="section">
         <h3>Track Your Progress</h3>
         <form id="user-form">
-          <!-- This expects a 7-digit username -->
-          <input type="text" id="username" placeholder="Your 7-digit Username" />
+          <input type="text" id="username" placeholder="Your Username">
           <button type="submit">Start Tracking</button>
           <p id="user-message"></p>
         </form>
       </section>
 
-      <!-- Problems Section -->
       <section id="problems" class="section">
         <h3>Questions!</h3>
 
         <!-- Topic 1 -->
         <div class="topic-card">
           <h4 class="topic-title">Topic A: Linear Equations</h4>
-          <!-- Note the use of "collapsed" (instead of "hidden") -->
-          <div class="topic-content collapsed">
+          <div class="topic-content hidden">
             <div class="book-card" data-problem-id="problemA1" data-correct-answer="3" data-title="Question A1">
               <b>QUESTION A1:</b> Solve for x: 2x + 1 = 7.
             </div>
+
             <div class="book-card" data-problem-id="problemA2" data-correct-answer="5" data-title="Question A2">
               <b>QUESTION A2:</b> Solve for x: x - 4 = 1.
             </div>
+
             <div class="book-card" data-problem-id="problemA3" data-correct-answer="8" data-title="Question A3">
               <b>QUESTION A3:</b> Solve for x: x/2 = 4.
             </div>
+
             <div class="book-card" data-problem-id="problemA4" data-correct-answer="2" data-title="Question A4">
               <b>QUESTION A4:</b> Solve for x: 3x = 6.
             </div>
+
             <div class="book-card" data-problem-id="problemA5" data-correct-answer="10" data-title="Question A5">
               <b>QUESTION A5:</b> Solve for x: x + 7 = 17.
             </div>
-            <!-- Add additional Topic A problems as needed -->
+
+            <div class="book-card" data-problem-id="problemA6" data-correct-answer="4" data-title="Question A6">
+              <b>QUESTION A6:</b> Solve for x: 5x - 2 = 18.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA7" data-correct-answer="7" data-title="Question A7">
+              <b>QUESTION A7:</b> Solve for x: 2x + 3 = 17.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA8" data-correct-answer="12" data-title="Question A8">
+              <b>QUESTION A8:</b> Solve for x: x/3 = 4.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA9" data-correct-answer="9" data-title="Question A9">
+              <b>QUESTION A9:</b> Solve for x: 4x = 36.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA10" data-correct-answer="6" data-title="Question A10">
+              <b>QUESTION A10:</b> Solve for x: x - 3 = 3.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA11" data-correct-answer="5" data-title="Question A11">
+              <b>QUESTION A11:</b> Solve for x: 2x + 5 = 15.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA12" data-correct-answer="2" data-title="Question A12">
+              <b>QUESTION A12:</b> Solve for x: 7x = 14.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA13" data-correct-answer="4" data-title="Question A13">
+              <b>QUESTION A13:</b> Solve for x: 3x + 5 = 17.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA14" data-correct-answer="20" data-title="Question A14">
+              <b>QUESTION A14:</b> Solve for x: x/4 = 5.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA15" data-correct-answer="3" data-title="Question A15">
+              <b>QUESTION A15:</b> Solve for x: 6x = 18.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA16" data-correct-answer="11" data-title="Question A16">
+              <b>QUESTION A16:</b> Solve for x: x + 9 = 20.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA17" data-correct-answer="2" data-title="Question A17">
+              <b>QUESTION A17:</b> Solve for x: 4x + 6 = 14.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA18" data-correct-answer="7" data-title="Question A18">
+              <b>QUESTION A18:</b> Solve for x: x/2 = 3.5.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA19" data-correct-answer="9" data-title="Question A19">
+              <b>QUESTION A19:</b> Solve for x: 5x - 6 = 39.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA20" data-correct-answer="4" data-title="Question A20">
+              <b>QUESTION A20:</b> Solve for x: 2x + 4 = 12.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA21" data-correct-answer="6" data-title="Question A21">
+              <b>QUESTION A21:</b> Solve for x: 7x - 8 = 34.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA22" data-correct-answer="3" data-title="Question A22">
+              <b>QUESTION A22:</b> Solve for x: x + 5 = 8.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA23" data-correct-answer="4" data-title="Question A23">
+              <b>QUESTION A23:</b> Solve for x: 9x = 36.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA24" data-correct-answer="2" data-title="Question A24">
+              <b>QUESTION A24:</b> Solve for x: 3x + 4 = 10.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA25" data-correct-answer="12" data-title="Question A25">
+              <b>QUESTION A25:</b> Solve for x: x - 8 = 4.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA26" data-correct-answer="7" data-title="Question A26">
+              <b>QUESTION A26:</b> Solve for x: 6x = 42.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA27" data-correct-answer="10" data-title="Question A27">
+              <b>QUESTION A27:</b> Solve for x: x/5 = 2.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA28" data-correct-answer="8" data-title="Question A28">
+              <b>QUESTION A28:</b> Solve for x: 4x - 12 = 20.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA29" data-correct-answer="2" data-title="Question A29">
+              <b>QUESTION A29:</b> Solve for x: 9x = 18.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA30" data-correct-answer="5" data-title="Question A30">
+              <b>QUESTION A30:</b> Solve for x: x + 9 = 14.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA31" data-correct-answer="6" data-title="Question A31">
+              <b>QUESTION A31:</b> Solve for x: 3x + 3 = 21.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA32" data-correct-answer="15" data-title="Question A32">
+              <b>QUESTION A32:</b> Solve for x: x/3 = 5.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA33" data-correct-answer="20" data-title="Question A33">
+              <b>QUESTION A33:</b> Solve for x: 2x = 40.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA34" data-correct-answer="9" data-title="Question A34">
+              <b>QUESTION A34:</b> Solve for x: 4x - 3 = 33.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA35" data-correct-answer="11" data-title="Question A35">
+              <b>QUESTION A35:</b> Solve for x: x + 7 = 18.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA36" data-correct-answer="3" data-title="Question A36">
+              <b>QUESTION A36:</b> Solve for x: 5x = 15.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA37" data-correct-answer="16" data-title="Question A37">
+              <b>QUESTION A37:</b> Solve for x: x - 4 = 12.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA38" data-correct-answer="14" data-title="Question A38">
+              <b>QUESTION A38:</b> Solve for x: x/2 = 7.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA39" data-correct-answer="12" data-title="Question A39">
+              <b>QUESTION A39:</b> Solve for x: 4x = 48.
+            </div>
+
+            <div class="book-card" data-problem-id="problemA40" data-correct-answer="8" data-title="Question A40">
+              <b>QUESTION A40:</b> Solve for x: 2x = 16.
+            </div>
           </div>
         </div>
 
         <!-- Topic 2 -->
         <div class="topic-card">
           <h4 class="topic-title">Topic B: Quadratic Equations</h4>
-          <div class="topic-content collapsed">
+          <div class="topic-content hidden">
             <div class="book-card" data-problem-id="problemB1" data-correct-answer="3" data-title="Question B1">
               <b>QUESTION B1:</b> Find the greater solution: x² - 2x - 3 = 0.
             </div>
+
             <div class="book-card" data-problem-id="problemB2" data-correct-answer="4" data-title="Question B2">
               <b>QUESTION B2:</b> Find the greater solution: x² - 6x + 8 = 0.
             </div>
+
             <div class="book-card" data-problem-id="problemB3" data-correct-answer="5" data-title="Question B3">
               <b>QUESTION B3:</b> Find the greater solution: x² - 10x + 25 = 0.
             </div>
-            <!-- Add additional Topic B problems as needed -->
+
+            <div class="book-card" data-problem-id="problemB4" data-correct-answer="3" data-title="Question B4">
+              <b>QUESTION B4:</b> Find the greater solution: x² - x - 6 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB5" data-correct-answer="4" data-title="Question B5">
+              <b>QUESTION B5:</b> Find the greater solution: x² - 8x + 12 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB6" data-correct-answer="7" data-title="Question B6">
+              <b>QUESTION B6:</b> Find the greater solution: x² - 10x + 21 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB7" data-correct-answer="6" data-title="Question B7">
+              <b>QUESTION B7:</b> Find the greater solution: x² - 12x + 36 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB8" data-correct-answer="5" data-title="Question B8">
+              <b>QUESTION B8:</b> Find the greater solution: x² - 6x - 7 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB9" data-correct-answer="8" data-title="Question B9">
+              <b>QUESTION B9:</b> Find the greater solution: x² - 16x + 48 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB10" data-correct-answer="4" data-title="Question B10">
+              <b>QUESTION B10:</b> Find the greater solution: x² - 8x + 16 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB11" data-correct-answer="5" data-title="Question B11">
+              <b>QUESTION B11:</b> Find the greater solution: x² - 2x - 15 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB12" data-correct-answer="10" data-title="Question B12">
+              <b>QUESTION B12:</b> Find the greater solution: x² - 20x + 100 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB13" data-correct-answer="6" data-title="Question B13">
+              <b>QUESTION B13:</b> Find the greater solution: x² - 6x - 9 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB14" data-correct-answer="4" data-title="Question B14">
+              <b>QUESTION B14:</b> Find the greater solution: x² - 5x + 4 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB15" data-correct-answer="6" data-title="Question B15">
+              <b>QUESTION B15:</b> Find the greater solution: x² - 9x + 14 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB16" data-correct-answer="5" data-title="Question B16">
+              <b>QUESTION B16:</b> Find the greater solution: x² - 10x + 25 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB17" data-correct-answer="4" data-title="Question B17">
+              <b>QUESTION B17:</b> Find the greater solution: x² - 8x + 16 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB18" data-correct-answer="6" data-title="Question B18">
+              <b>QUESTION B18:</b> Find the greater solution: x² - 11x + 30 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB19" data-correct-answer="8" data-title="Question B19">
+              <b>QUESTION B19:</b> Find the greater solution: x² - 16x + 64 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB20" data-correct-answer="3" data-title="Question B20">
+              <b>QUESTION B20:</b> Find the greater solution: x² - x - 6 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB21" data-correct-answer="9" data-title="Question B21">
+              <b>QUESTION B21:</b> Find the greater solution: x² - 18x + 81 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB22" data-correct-answer="8" data-title="Question B22">
+              <b>QUESTION B22:</b> Find the greater solution: x² - 10x + 16 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB23" data-correct-answer="6" data-title="Question B23">
+              <b>QUESTION B23:</b> Find the greater solution: x² - 7x + 12 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB24" data-correct-answer="5" data-title="Question B24">
+              <b>QUESTION B24:</b> Find the greater solution: x² - 3x - 10 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB25" data-correct-answer="7" data-title="Question B25">
+              <b>QUESTION B25:</b> Find the greater solution: x² - 10x + 21 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB26" data-correct-answer="9" data-title="Question B26">
+              <b>QUESTION B26:</b> Find the greater solution: x² - 18x + 81 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB27" data-correct-answer="4" data-title="Question B27">
+              <b>QUESTION B27:</b> Find the greater solution: x² - 6x + 8 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB28" data-correct-answer="6" data-title="Question B28">
+              <b>QUESTION B28:</b> Find the greater solution: x² - 7x + 12 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB29" data-correct-answer="8" data-title="Question B29">
+              <b>QUESTION B29:</b> Find the greater solution: x² - 12x + 32 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB30" data-correct-answer="9" data-title="Question B30">
+              <b>QUESTION B30:</b> Find the greater solution: x² - 10x + 25 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB31" data-correct-answer="6" data-title="Question B31">
+              <b>QUESTION B31:</b> Find the greater solution: x² - 11x + 30 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB32" data-correct-answer="4" data-title="Question B32">
+              <b>QUESTION B32:</b> Find the greater solution: x² - 8x + 16 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB33" data-correct-answer="7" data-title="Question B33">
+              <b>QUESTION B33:</b> Find the greater solution: x² - 10x + 21 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB34" data-correct-answer="8" data-title="Question B34">
+              <b>QUESTION B34:</b> Find the greater solution: x² - 6x - 8 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB35" data-correct-answer="10" data-title="Question B35">
+              <b>QUESTION B35:</b> Find the greater solution: x² - 15x + 50 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB36" data-correct-answer="4" data-title="Question B36">
+              <b>QUESTION B36:</b> Find the greater solution: x² - 4x = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB37" data-correct-answer="9" data-title="Question B37">
+              <b>QUESTION B37:</b> Find the greater solution: x² - 18x + 81 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB38" data-correct-answer="7" data-title="Question B38">
+              <b>QUESTION B38:</b> Find the greater solution: x² - 14x + 49 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB39" data-correct-answer="6" data-title="Question B39">
+              <b>QUESTION B39:</b> Find the greater solution: x² - 5x - 6 = 0.
+            </div>
+
+            <div class="book-card" data-problem-id="problemB40" data-correct-answer="8" data-title="Question B40">
+              <b>QUESTION B40:</b> Find the greater solution: x² - 2x - 15 = 0.
+            </div>
+
           </div>
         </div>
 
-        <!-- Topic 3 -->
         <div class="topic-card">
           <h4 class="topic-title">Topic C: Coordinate Transformations</h4>
-          <div class="topic-content collapsed">
+          <div class="topic-content hidden">
             <div class="book-card" data-problem-id="problemC1" data-correct-answer="(4, -2)" data-title="Question C1">
               <b>QUESTION C1:</b> A point (2, 3) is translated 2 units to the right and 5 units down. What are the new coordinates?
             </div>
+
             <div class="book-card" data-problem-id="problemC2" data-correct-answer="(1, 7)" data-title="Question C2">
               <b>QUESTION C2:</b> A point (4, 2) is reflected across the line y = 4.5. What are the new coordinates?
             </div>
+
             <div class="book-card" data-problem-id="problemC3" data-correct-answer="(-1, 3)" data-title="Question C3">
-              <b>QUESTION C3:</b> A point (3, 1) is rotated 90° counterclockwise about the origin. What are the new coordinates?
+              <b>QUESTION C3:</b> A point (3, 1) is rotated 90 degrees counterclockwise about the origin. What are the new coordinates?
             </div>
-            <!-- Add additional Topic C problems as needed -->
+
+            <div class="book-card" data-problem-id="problemC4" data-correct-answer="(-7, -1)" data-title="Question C4">
+              <b>QUESTION C4:</b> A point (7, -1) is reflected across the y-axis. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC5" data-correct-answer="(-2, -3)" data-title="Question C5">
+              <b>QUESTION C5:</b> A point (2, 3) is rotated 180 degrees about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC6" data-correct-answer="(-3, 5)" data-title="Question C6">
+              <b>QUESTION C6:</b> A point (3, -5) is reflected across the line y = -x. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC7" data-correct-answer="(6, -15)" data-title="Question C7">
+              <b>QUESTION C7:</b> A point (2, -5) is scaled by a factor of 3 about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC8" data-correct-answer="(7, 3)" data-title="Question C8">
+              <b>QUESTION C8:</b> A point (3, 7) is reflected across the line y = x. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC9" data-correct-answer="(-2, 4)" data-title="Question C9">
+              <b>QUESTION C9:</b> A point (2, -4) is reflected across the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC10" data-correct-answer="(4, 7)" data-title="Question C10">
+              <b>QUESTION C10:</b> A point (1, 5) is translated 3 units to the right and 2 units up. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC11" data-correct-answer="(10, -4)" data-title="Question C11">
+              <b>QUESTION C11:</b> A point (5, -2) is scaled by a factor of 2 about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC12" data-correct-answer="(-5, 2)" data-title="Question C12">
+              <b>QUESTION C12:</b> A point (5, -2) is reflected across the y-axis. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC13" data-correct-answer="(-2, 3)" data-title="Question C13">
+              <b>QUESTION C13:</b> A point (3, 2) is rotated 90 degrees counterclockwise about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC14" data-correct-answer="(-3, -4)" data-title="Question C14">
+              <b>QUESTION C14:</b> A point (4, 3) is reflected across the line y = -x. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC15" data-correct-answer="(1, 7)" data-title="Question C15">
+              <b>QUESTION C15:</b> A point (-2, 3) is translated 3 units to the right and 4 units up. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC16" data-correct-answer="(-6, 2)" data-title="Question C16">
+              <b>QUESTION C16:</b> A point (6, -2) is reflected across the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC17" data-correct-answer="(12, -9)" data-title="Question C17">
+              <b>QUESTION C17:</b> A point (4, -3) is scaled by a factor of 3 about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC18" data-correct-answer="(-3, -7)" data-title="Question C18">
+              <b>QUESTION C18:</b> A point (3, 7) is rotated 180 degrees about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC19" data-correct-answer="(7, 3)" data-title="Question C19">
+              <b>QUESTION C19:</b> A point (3, 7) is reflected across the line y = x. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC20" data-correct-answer="(8, -1)" data-title="Question C20">
+              <b>QUESTION C20:</b> A point (4, 2) is scaled by a factor of 2 about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC21" data-correct-answer="(6, -4)" data-title="Question C21">
+              <b>QUESTION C21:</b> A point (2, -3) is translated 4 units to the right and 1 unit down. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC22" data-correct-answer="(2, -7)" data-title="Question C22">
+              <b>QUESTION C22:</b> A point (2, 3) is reflected across the x-axis. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC23" data-correct-answer="(9, 2)" data-title="Question C23">
+              <b>QUESTION C23:</b> A point (3, 6) is rotated 90 degrees clockwise about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC24" data-correct-answer="(5, -7)" data-title="Question C24">
+              <b>QUESTION C24:</b> A point (5, 7) is reflected across the x-axis. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC25" data-correct-answer="(6, 12)" data-title="Question C25">
+              <b>QUESTION C25:</b> A point (2, 4) is scaled by a factor of 3 about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC26" data-correct-answer="(0, 5)" data-title="Question C26">
+              <b>QUESTION C26:</b> A point (-5, 0) is rotated 90 degrees counterclockwise about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC27" data-correct-answer="(-5, -1)" data-title="Question C27">
+              <b>QUESTION C27:</b> A point (5, 1) is reflected across the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC28" data-correct-answer="(3, 8)" data-title="Question C28">
+              <b>QUESTION C28:</b> A point (3, 5) is translated 0 units right and 3 units up. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC29" data-correct-answer="(-4, -5)" data-title="Question C29">
+              <b>QUESTION C29:</b> A point (5, 4) is reflected across the line y = -x. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC30" data-correct-answer="(7, 1)" data-title="Question C30">
+              <b>QUESTION C30:</b> A point (3, 1) is translated 4 units to the right and 0 units up. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC31" data-correct-answer="(9, -3)" data-title="Question C31">
+              <b>QUESTION C31:</b> A point (3, -1) is scaled by a factor of 3 about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC32" data-correct-answer="(4, -3)" data-title="Question C32">
+              <b>QUESTION C32:</b> A point (3, 4) is reflected across the line y = x. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC33" data-correct-answer="(6, 9)" data-title="Question C33">
+              <b>QUESTION C33:</b> A point (2, 3) is scaled by a factor of 3 about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC34" data-correct-answer="(-3, -1)" data-title="Question C34">
+              <b>QUESTION C34:</b> A point (3, 1) is rotated 180 degrees about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC35" data-correct-answer="(0, 6)" data-title="Question C35">
+              <b>QUESTION C35:</b> A point (6, 0) is rotated 90 degrees counterclockwise about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC36" data-correct-answer="(5, 2)" data-title="Question C36">
+              <b>QUESTION C36:</b> A point (5, -2) is reflected across the x-axis. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC37" data-correct-answer="(8, -6)" data-title="Question C37">
+              <b>QUESTION C37:</b> A point (4, -3) is scaled by a factor of 2 about the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC38" data-correct-answer="(3, 1)" data-title="Question C38">
+              <b>QUESTION C38:</b> A point (1, 3) is reflected across the line y = x. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC39" data-correct-answer="(-3, -6)" data-title="Question C39">
+              <b>QUESTION C39:</b> A point (3, 6) is reflected across the origin. What are the new coordinates?
+            </div>
+
+            <div class="book-card" data-problem-id="problemC40" data-correct-answer="(4, 8)" data-title="Question C40">
+              <b>QUESTION C40:</b> A point (2, 4) is scaled by a factor of 2 about the origin. What are the new coordinates?
+            </div>
+
           </div>
         </div>
+
       </section>
 
-      <!-- Leaderboard Section -->
-      <section id="leaderboard" class="section">
-        <h3>Leaderboard</h3>
-        <ul id="leaderboard-list"></ul>
-      </section>
 
-      <!-- Popup Section -->
-      <div id="book-popup" class="popup collapsed">
+      <div id="book-popup" class="popup hidden">
         <div class="popup-content">
           <span class="close-btn">&times;</span>
           <h2 id="popup-book-title">Book Title</h2>
-          <input
-            type="text"
-            id="popup-username"
-            class="popup-input"
-            placeholder="Enter your answer"
-          />
-          <a id="popup-link" class="popup-button" href="#" target="_blank">
-            Check
-          </a>
-          <button id="report-button" class="popup-button report-button">
-            Report Question
-          </button>
+          <input type="text" id="popup-username" class="popup-input" placeholder="Enter your answer" />
+          <a id="popup-link" class="popup-button" href="#" target="_blank">Check</a>
+          <button id="report-button" class="popup-button report-button">Report Question</button>
         </div>
       </div>
+
     </main>
 
     <!-- Footer Section -->
     <footer>
       <div class="container" id="final">
-        <p>
-          &copy; This is a John Adams Middle School 501(c)(3) Organization.
-        </p>
+        <p>&copy; This is a John Adams Middle School 501(c)(3) Organization.</p>
       </div>
     </footer>
 
-    <!-- Firebase Configuration and Initialization -->
-    <script>
-      // Replace the placeholder values with your Firebase project settings.
-      var firebaseConfig = {
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_AUTH_DOMAIN",
-        projectId: "YOUR_PROJECT_ID",
-        storageBucket: "YOUR_STORAGE_BUCKET",
-        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-        appId: "YOUR_APP_ID"
-      };
-      firebase.initializeApp(firebaseConfig);
-      var db = firebase.firestore();
-    </script>
-
-    <!-- JavaScript Code -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // DOM Elements
-        const bookCards = document.querySelectorAll('.book-card');
-        const topics = document.querySelectorAll('.topic-card');
-        const popup = document.getElementById('book-popup');
-        const popupTitle = document.getElementById('popup-book-title');
-        const popupInput = document.getElementById('popup-username');
-        const popupButton = document.getElementById('popup-link');
-        const closeBtn = document.querySelector('.close-btn');
-        const reportButton = document.getElementById('report-button');
-        const starSystem = document.getElementById('star-system');
-        const userForm = document.getElementById('user-form');
-        const emailInput = document.getElementById('username');
-        const userMessage = document.getElementById('user-message');
-        const leaderboardList = document.getElementById('leaderboard-list');
-
-        let correctAnswer = "";
-        let problemID = "";
-        let username = ""; // In this case, a 7-digit username is expected
-
-        // Handle username submission
-        userForm.addEventListener('submit', (event) => {
-          event.preventDefault();
-          const inputUsername = emailInput.value.trim();
-          if (/^\d{7}$/.test(inputUsername)) { // Validate as 7-digit number
-            username = inputUsername;
-            const userProgress = JSON.parse(localStorage.getItem('userProgress')) || {};
-            const userStars = userProgress[username]?.stars || 0;
-            starSystem.textContent = `⭐ ${userStars}`;
-            userMessage.textContent = `Welcome, ${username}! Your progress is now being tracked.`;
-            userMessage.style.color = "";
-            if (!userProgress[username]) {
-              userProgress[username] = { stars: 0, solvedProblems: [] };
-              localStorage.setItem('userProgress', JSON.stringify(userProgress));
-            }
-          } else {
-            userMessage.textContent = 'Please enter a valid 7-digit username.';
-            userMessage.style.color = 'red';
-            setTimeout(() => (userMessage.textContent = ''), 3000);
-          }
-        });
-
-        // Expand/collapse topics
-        topics.forEach(topic => {
-          const title = topic.querySelector('.topic-title');
-          const content = topic.querySelector('.topic-content');
-          title.addEventListener('click', () => {
-            content.classList.toggle('collapsed');
-          });
-        });
-
-        // Show popup on book-card click
-        bookCards.forEach(card => {
-          card.addEventListener('click', (event) => {
-            event.preventDefault();
-            if (!username) {
-              alert('Please enter your username first to start tracking progress.');
-              return;
-            }
-            problemID = card.getAttribute('data-problem-id');
-            correctAnswer = card.getAttribute('data-correct-answer');
-            const title = card.getAttribute('data-title');
-            popupTitle.textContent = title;
-            popupInput.value = "";
-            popupInput.style.borderColor = "";
-            popup.classList.add('visible');
-          });
-        });
-
-        // Close popup
-        closeBtn.addEventListener('click', () => {
-          popup.classList.remove('visible');
-        });
-
-        // Check Answer
-        popupButton.addEventListener('click', (event) => {
-          event.preventDefault();
-          const userAnswer = popupInput.value.trim();
-          const userProgress = JSON.parse(localStorage.getItem('userProgress')) || {};
-          const userStars = userProgress[username]?.stars || 0;
-          const solvedProblems = userProgress[username]?.solvedProblems || [];
-  
-          if (solvedProblems.includes(problemID)) {
-            popupInput.style.borderColor = 'orange';
-          } else if (userAnswer === correctAnswer) {
-            popupInput.style.borderColor = 'green';
-            userProgress[username].stars = userStars + 1;
-            userProgress[username].solvedProblems.push(problemID);
-            localStorage.setItem('userProgress', JSON.stringify(userProgress));
-            starSystem.textContent = `⭐ ${userProgress[username].stars}`;
-          } else {
-            popupInput.style.borderColor = 'red';
-            setTimeout(() => {
-              popupInput.style.borderColor = '';
-            }, 500);
-          }
-        });
-
-        // Report Question Functionality
-        reportButton.addEventListener('click', () => {
-          if (!username) {
-            alert('Please log in with your username to report a question.');
-            return;
-          }
-          const reportMessage = `The question "${popupTitle.textContent}" has been reported. Thank you!`;
-          alert(reportMessage);
-          const reports = JSON.parse(localStorage.getItem('reportedQuestions')) || [];
-          reports.push({ username, question: popupTitle.textContent, timestamp: new Date().toISOString() });
-          localStorage.setItem('reportedQuestions', JSON.stringify(reports));
-        });
-  
-        // Load saved data from localStorage when the page loads
-        const savedData = JSON.parse(localStorage.getItem('userProgress')) || {};
-        if (username in savedData) {
-          const userStars = savedData[username].stars;
-          starSystem.textContent = `⭐ ${userStars}`;
-          userMessage.textContent = `Welcome back, ${username}! Your progress is being tracked.`;
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
