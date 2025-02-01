@@ -1,27 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+          />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Math JAMS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="https://i.postimg.cc/2jv9GmfM/Read-JAMS-1.png" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+          rel="stylesheet"
+          />
+    <link
+          href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
+          rel="stylesheet"
+          />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Favicon -->
+    <link
+          rel="icon"
+          href="https://i.postimg.cc/2jv9GmfM/Read-JAMS-1.png"
+          type="image/x-icon"
+          />
+    <!-- Firebase SDKs (v8) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <!--
+      IMPORTANT:
+      In your CSS, ensure that the following rules (or similar) are included so that topic content is hidden when collapsed:
+
+      .topic-content.collapsed { display: none; }
+      .topic-content { display: block; }
+    -->
   </head>
   <body>
     <!-- Header Section -->
     <section id="home">
       <header>
-        <img src="https://i.postimg.cc/2jv9GmfM/Read-JAMS-1.png">
+        <img
+             src="https://i.postimg.cc/2jv9GmfM/Read-JAMS-1.png"
+             alt="Math JAMS Logo"
+             />
       </header>
       <subheader>
         <div>
-          <a src="https://nordvpn.com/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGjryC__w5W7qqVkw8wmLh914my0tHoUNaeA&s" height = 30px></a>
-          <a src="https://nordpass.com/"><img src="https://bestreviews.net/wp-content/uploads/2024/06/nordpass-logo.svg" height = 30px></a>
+          <!-- Changed src attribute to href for proper linking -->
+          <a href="https://nordvpn.com/">
+            <img
+                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGjryC__w5W7qqVkw8wmLh914my0tHoUNaeA&s"
+                 height="30px"
+                 alt="NordVPN"
+                 />
+          </a>
+          <a href="https://nordpass.com/">
+            <img
+                 src="https://bestreviews.net/wp-content/uploads/2024/06/nordpass-logo.svg"
+                 height="30px"
+                 alt="NordPass"
+                 />
+          </a>
         </div>
       </subheader>
     </section>
@@ -30,9 +70,14 @@
     <nav>
       <div class="container">
         <ul>
-          <p>
-            <li><img src="https://i.postimg.cc/mD9jm3KC/MATH.png" alt="Image from URL" style="float: right;" height = 50px /></li>
-          </p>
+          <li>
+            <img
+                 src="https://i.postimg.cc/mD9jm3KC/MATH.png"
+                 alt="Math JAMS Logo"
+                 style="float: right;"
+                 height="50px"
+                 />
+          </li>
         </ul>
         <span class="star-counter" id="star-system">⭐ 0</span>
       </div>
@@ -40,29 +85,46 @@
 
     <!-- Main Content -->
     <main>
+      <!-- Compete Section -->
       <section id="compete" class="section">
-        <h3> COMPETE </h3>
-
+        <h3>COMPETE</h3>
         <div class="cards">
-          <a class="card" href="https://jams.edison.k12.nj.us/"><b>LOCATION: </b> John Adams Middle School, Edison, NJ.</a>
-          <a class="card" href="https://jams.edison.k12.nj.us/"><b>WHO CAN APPLY: </b> All students in Edison from grades 3-8!</a>
-          <a class="card" href="https://jams.edison.k12.nj.us/"><b>DIVISIONS: </b> We have 2 divisions, the JUNIOR division is for those in grades 3-5, and the SENIOR division is for those in grades 6-8.</a>
-          <a class="card" href="https://jams.edison.k12.nj.us/"><b>TIMINGS: </b> Dates and timings will be posted soon!</a>
-          <a class="card" href="https://jams.edison.k12.nj.us/"><b>PRICING: </b> The price is $2 per participant.</a>
-          <a class="card" href="https://jams.edison.k12.nj.us/"><b>PRIZES: </b> Prizes will be posted soon!</a>
-          <a class="card" id="join" href="https://jams.edison.k12.nj.us/"><strong>JOIN HERE!</strong></a>
+          <a class="card" href="https://jams.edison.k12.nj.us/">
+            <b>LOCATION: </b> John Adams Middle School, Edison, NJ.
+          </a>
+          <a class="card" href="https://jams.edison.k12.nj.us/">
+            <b>WHO CAN APPLY: </b> All students in Edison from grades 3-8!
+          </a>
+          <a class="card" href="https://jams.edison.k12.nj.us/">
+            <b>DIVISIONS: </b> JUNIOR (grades 3-5) and SENIOR (grades 6-8).
+          </a>
+          <a class="card" href="https://jams.edison.k12.nj.us/">
+            <b>TIMINGS: </b> Dates and timings will be posted soon!
+          </a>
+          <a class="card" href="https://jams.edison.k12.nj.us/">
+            <b>PRICING: </b> $2 per participant.
+          </a>
+          <a class="card" href="https://jams.edison.k12.nj.us/">
+            <b>PRIZES: </b> Prizes will be posted soon!
+          </a>
+          <a class="card" id="join" href="https://jams.edison.k12.nj.us/">
+            <strong>JOIN HERE!</strong>
+          </a>
         </div>
       </section>
 
+      <!-- User Login Section -->
       <section id="user-login" class="section">
         <h3>Track Your Progress</h3>
         <form id="user-form">
-          <input type="text" id="username" placeholder="Your Username">
+          <!-- The placeholder indicates a 7-digit username -->
+          <input type="text" id="username" placeholder="Your 7-digit Username" />
           <button type="submit">Start Tracking</button>
           <p id="user-message"></p>
         </form>
       </section>
 
+      <!-- Problems Section -->
       <section id="problems" class="section">
         <h3>Questions!</h3>
 
@@ -567,26 +629,193 @@
 
       </section>
 
-
-      <div id="book-popup" class="popup hidden">
+      <!-- Popup Section -->
+      <div id="book-popup" class="popup collapsed">
         <div class="popup-content">
           <span class="close-btn">&times;</span>
           <h2 id="popup-book-title">Book Title</h2>
-          <input type="text" id="popup-username" class="popup-input" placeholder="Enter your answer" />
-          <a id="popup-link" class="popup-button" href="#" target="_blank">Check</a>
-          <button id="report-button" class="popup-button report-button">Report Question</button>
+          <input
+                 type="text"
+                 id="popup-username"
+                 class="popup-input"
+                 placeholder="Enter your answer"
+                 />
+          <a id="popup-link" class="popup-button" href="#" target="_blank">
+            Check
+          </a>
+          <button id="report-button" class="popup-button report-button">
+            Report Question
+          </button>
         </div>
       </div>
-
     </main>
 
     <!-- Footer Section -->
     <footer>
       <div class="container" id="final">
-        <p>&copy; This is a John Adams Middle School 501(c)(3) Organization.</p>
+        <p>
+          &copy; This is a John Adams Middle School 501(c)(3) Organization.
+        </p>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JavaScript Code -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // DOM Elements
+        const bookCards = document.querySelectorAll('.book-card');
+        const topics = document.querySelectorAll('.topic-card');
+        const popup = document.getElementById('book-popup');
+        const popupTitle = document.getElementById('popup-book-title');
+        const popupInput = document.getElementById('popup-username');
+        const popupButton = document.getElementById('popup-link');
+        const closeBtn = document.querySelector('.close-btn');
+        const reportButton = document.getElementById('report-button');
+        const starSystem = document.getElementById('star-system');
+        const userForm = document.getElementById('user-form');
+        const emailInput = document.getElementById('username');
+        const userMessage = document.getElementById('user-message');
+        const leaderboardList = document.getElementById('leaderboard-list');
+  
+        let correctAnswer = "";
+        let problemID = "";
+        let email = "";
+  
+        // Helper: Update Leaderboard (Top 10 users by stars)
+        async function updateLeaderboard() {
+          leaderboardList.innerHTML = "";
+          try {
+            const snapshot = await db.collection('userProgress')
+              .orderBy('stars', 'desc')
+              .limit(10)
+              .get();
+            snapshot.forEach(doc => {
+              const li = document.createElement('li');
+              const data = doc.data();
+              li.textContent = `${doc.id}: ${data.stars} star${data.stars !== 1 ? 's' : ''}`;
+              leaderboardList.appendChild(li);
+            });
+          } catch (error) {
+            console.error("Error updating leaderboard:", error);
+          }
+        }
+  
+        // Handle email submission
+        userForm.addEventListener('submit', async (event) => {
+          event.preventDefault();
+          const inputEmail = emailInput.value.trim();
+          if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputEmail)) { // Validate email format
+            email = inputEmail;
+            const userDocRef = db.collection('userProgress').doc(email);
+            try {
+              const docSnap = await userDocRef.get();
+              if (docSnap.exists) {
+                const userData = docSnap.data();
+                starSystem.textContent = `⭐ ${userData.stars}`;
+                userMessage.textContent = `Welcome back, ${email}! Your progress is being tracked.`;
+              } else {
+                await userDocRef.set({ stars: 0, solvedProblems: [] });
+                starSystem.textContent = `⭐ 0`;
+                userMessage.textContent = `Welcome, ${email}! Your progress is now being tracked.`;
+              }
+              userMessage.style.color = "";
+              updateLeaderboard();
+            } catch (error) {
+              console.error("Error accessing user progress:", error);
+            }
+          } else {
+            userMessage.textContent = 'Please enter a valid email address.';
+            userMessage.style.color = 'red';
+            setTimeout(() => (userMessage.textContent = ''), 3000);
+          }
+        });
+  
+        // Expand/collapse topics
+        topics.forEach(topic => {
+          const title = topic.querySelector('.topic-title');
+          const content = topic.querySelector('.topic-content');
+          title.addEventListener('click', () => {
+            content.classList.toggle('collapsed');
+          });
+        });
+  
+        // Show popup on book-card click
+        bookCards.forEach(card => {
+          card.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (!email) {
+              alert('Please enter your email first to start tracking progress.');
+              return;
+            }
+            problemID = card.getAttribute('data-problem-id');
+            correctAnswer = card.getAttribute('data-correct-answer');
+            const title = card.getAttribute('data-title');
+            popupTitle.textContent = title;
+            popupInput.value = "";
+            popupInput.style.borderColor = "";
+            popup.classList.add('visible');
+          });
+        });
+  
+        // Close popup
+        closeBtn.addEventListener('click', () => {
+          popup.classList.remove('visible');
+        });
+  
+        // Check Answer and update progress online
+        popupButton.addEventListener('click', async (event) => {
+          event.preventDefault();
+          const userAnswer = popupInput.value.trim();
+          if (!email) {
+            alert('Please log in with your email first.');
+            return;
+          }
+          const userDocRef = db.collection('userProgress').doc(email);
+          try {
+            const docSnap = await userDocRef.get();
+            const userData = docSnap.data();
+            if (userData.solvedProblems.includes(problemID)) {
+              popupInput.style.borderColor = 'orange';
+            } else if (userAnswer === correctAnswer) {
+              popupInput.style.borderColor = 'green';
+              const newStars = userData.stars + 1;
+              const newSolved = [...userData.solvedProblems, problemID];
+              await userDocRef.update({ stars: newStars, solvedProblems: newSolved });
+              starSystem.textContent = `⭐ ${newStars}`;
+              updateLeaderboard();
+            } else {
+              popupInput.style.borderColor = 'red';
+              setTimeout(() => {
+                popupInput.style.borderColor = '';
+              }, 500);
+            }
+          } catch (error) {
+            console.error("Error updating user progress:", error);
+          }
+        });
+  
+        // Report Question Functionality
+        reportButton.addEventListener('click', async () => {
+          if (!email) {
+            alert('Please log in with your email to report a question.');
+            return;
+          }
+          const reportMessage = `The question "${popupTitle.textContent}" has been reported. Thank you!`;
+          alert(reportMessage);
+          try {
+            await db.collection('reportedQuestions').add({
+              email,
+              question: popupTitle.textContent,
+              timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            });
+          } catch (error) {
+            console.error("Error reporting question:", error);
+          }
+        });
+  
+        // Optionally, update the leaderboard on page load
+        updateLeaderboard();
+      });
+    </script>
   </body>
 </html>
