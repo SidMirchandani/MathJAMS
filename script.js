@@ -122,3 +122,20 @@ document.addEventListener('DOMContentLoaded', () => {
     userMessage.textContent = `Welcome back, ${username}! Your progress is being tracked.`;
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownBtn = document.querySelector(".dropdown-btn");
+
+    dropdownBtn.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevents unwanted closing
+        dropdown.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove("active");
+        }
+    });
+});
